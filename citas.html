@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Citas Médicas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <div class="medical-icon"><img src="photos/hospital-building.png" alt="Hospital"></div>
+      <h1>Mis Citas</h1>
+      <p>Bienvenido, <strong id="usuarioNombre"></strong></p>
+      <button class="btn" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+
+    <div class="right-panel">
+      <h2 class="form-title">Agendar Cita Médica</h2>
+      <form id="appointmentForm" class="form-container">
+        <div class="form-group">
+          <label for="especialidad">Especialidad</label>
+          <select id="especialidad" required>
+            <option value="">Seleccione una especialidad</option>
+            <option value="Pediatría">Pediatría</option>
+            <option value="Cardiología">Cardiología</option>
+            <option value="Dermatología">Dermatología</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="medico">Médico</label>
+          <select id="medico" required>
+            <option value="">Seleccione un médico</option>
+            <option value="Dr. Juan Pérez">Dr. Juan Pérez</option>
+            <option value="Dra. Ana López">Dra. Ana López</option>
+            <option value="Dr. Carlos Gómez">Dr. Carlos Gómez</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" required>
+        </div>
+
+        <div class="form-group">
+          <label for="hora">Hora</label>
+          <input type="time" id="hora" required>
+        </div>
+
+        <div class="form-group">
+          <label for="motivo">Motivo</label>
+          <textarea id="motivo" rows="3" placeholder="Motivo de la consulta" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Agendar Cita</button>
+      </form>
+
+      <h2 class="form-title">Citas Agendadas</h2>
+      <div style="overflow-x:auto;">
+        <table id="tablaCitas">
+          <thead>
+            <tr>
+              <th>Especialidad</th>
+              <th>Médico</th>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Motivo</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
