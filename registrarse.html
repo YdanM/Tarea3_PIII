@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sistema de Citas Médicas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="medical-icon"><img src="photos/hospital-building.png" alt=""></div>
+            <h1>Sistema de Citas Médicas</h1>
+        </div>
+            <div id="registerForm" class="right-panel">
+                <h2 class="form-title">Registro de Paciente</h2>
+
+                <form>
+                    <div class="form-group">
+                        <label for="registerNombre">Nombre</label>
+                        <input type="text" id="registerNombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerApellidos">Apellidos</label>
+                        <input type="text" id="registerApellidos" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">Correo Electrónico</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">Contraseña</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">Confirmar Contraseña</label>
+                        <input type="password" id="registerConfirmPassword" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerTelefono">Teléfono</label>
+                        <input type="tel" id="registerTelefono">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerFechaNacimiento">Fecha de Nacimiento</label>
+                        <input type="date" id="registerFechaNacimiento">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerCedula">Cédula</label>
+                        <input type="text" id="registerCedula">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerDireccion">Dirección</label>
+                        <input type="text" id="registerDireccion">
+                    </div>
+
+                    <button type="button" class="btn">Registrarse</button>
+                </form>
+
+                <div class="switch-form">
+                    ¿Ya tienes cuenta? <a href="index.html">Inicia sesión aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
